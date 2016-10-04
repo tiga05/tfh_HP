@@ -1,0 +1,58 @@
+<html lang="en" ng-app="StarterApp">
+<head>
+
+</head>
+<body ng-app="StarterApp" layout class="background">
+
+<div class="container" layout="column" style="text-align: center" flex>
+    <div class="red" flex><h1><span>Trinkfreunde-Heidelberg</span></h1></div>
+    <div class="green" flex><h3 style="color: white">Gaming Community since 2013</h3></div>
+    <div class="blue" flex>
+        <div class="btn-group btn-group-justified btn-lg small">
+            <div class="btn-group">
+                <md-button ng-click="changeLang('GER')">
+                    <md-icon style="height: 25%;width: 25%;" md-svg-icon="img/german_flag.svg"></md-icon>
+                </md-button>
+                <md-button ng-click="changeLang('ENG')">
+                    <md-icon style="height: 25%;width: 25%;" md-svg-icon="img/english_flag.svg"></md-icon>
+                </md-button>
+            </div>
+        </div>
+    </div>
+    <div class="red" flex> <div ui-view class="mainText" style="background-color: rgba(250,250,250,0.9); color:#404040"></div></md-content>
+    </div>
+    </div>
+
+
+    <!-- Angular Material Dependencies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+    <script src="jspm_packages/github/angular/bower-angular-animate@1.5.0/angular-animate.js"></script>
+    <script src="jspm_packages/github/angular/bower-angular-aria@1.5.0/angular-aria.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.js"></script>
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.css">
+    <style>
+        .green {
+            background-color: green
+        }
+
+        .blue {
+            background-color: dodgerblue
+        }
+
+        .red {
+            background-color: orangered
+        }
+    </style>
+    <script>
+        var app = angular.module('StarterApp', ['ngMaterial']);
+
+        app.controller('AppCtrl', ['$scope', '$mdSidenav', function ($scope, $mdSidenav) {
+            $scope.toggleSidenav = function (menuId) {
+                $mdSidenav(menuId).toggle();
+            };
+
+        }]);
+    </script>
+</body>
+</html>

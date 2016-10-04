@@ -1,0 +1,195 @@
+<!doctype html >
+<!--[if lt IE 7]><html lang="en" class="no-js ie6"><![endif]-->
+<!--[if IE 7]><html lang="en" class="no-js ie7"><![endif]-->
+<!--[if IE 8]><html lang="en" class="no-js ie8"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>TFH - HOME</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="shortcut icon" href="tfh.ico">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!--
+            <link rel="stylesheet" href="css/animate.css">
+
+
+
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+
+    <script src="js/modernizr.custom.32033.js"></script>
+        -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/own.css">
+
+
+</head>
+
+<body ng-app="myApp" ng-controller="mainController" >
+
+    <div class="pre-loader">
+        <div class="load-con">
+            <img src="tfh.ico" class="animated fadeInDown" alt="">
+            <div class="spinner">
+                <div layout="row" layout-sm="column" layout-align="space-around">
+                    <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap all page content here -->
+    <div id="wrap">
+<!--
+        <md-toolbar >
+            <md-button class="md-icon-button" hide-gt-md show-sm show-md ng-click="showSearchBarDiv = true">
+                <i class="material-icons">menu</i>
+                <md-tooltip>Search</md-tooltip>
+            </md-button>
+            <div layout="row" class="md-toolbar-tools" show-sm show-md hide-gt-md ng-show="showSearchBarDiv">
+                <md-button class="md-icon-button" ng-click="showSearchBarDiv = false">
+                    <img src="back.png" style="width:24px;height:24px;"/>
+                </md-button>
+                <md-input-container flex="80" md-no-float class="md-accent" style="padding-bottom:0px;">
+                    <md-icon style="color:wheat" class="material-icons">&#xE8B6;</md-icon>
+                    <input ng-model="searchInput" placeholder="Search here" style="color:wheat;padding-left:25px;margin-left:5px">
+                </md-input-container>
+                <span flex></span>
+                <md-button class="md-icon-button">
+                    <img src="search.png" style="width:24px;height:24px;"/>
+                </md-button>
+            </div>
+        </md-toolbar>
+-->
+
+
+        <div layout="column" layout-fill>
+            <div layout="column">
+            <md-toolbar scroll> <!--scroll -->
+                <div class="md-toolbar-tools site-content-toolbar" >
+                    <md-button><span>TFH</span></md-button>
+
+                    <!-- fill up the space between left and right area -->
+                    <span flex></span>
+                    <md-button hide-xs ui-sref={{entry.route}} ng-repeat="entry in navBarEntries">{{entry.name|translate}}</md-button>
+                    <md-button  hide-gt-xs class="md-icon-button" ng-click="toggleRight()"
+                               ng-hide="isOpenRight()">
+                        <i class="material-icons">menu</i>
+                    </md-button>
+                </div>
+            </md-toolbar>
+            </div>
+        </div>
+
+        <md-sidenav scroll hide-gt-xs class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
+            <md-toolbar class="md-theme-light">
+                <h1 class="md-toolbar-tools">Menu</h1>
+            </md-toolbar>
+            <p ng-repeat="entry in navBarEntries"><md-button class="md-toolbar-dropdown" ng-click="close()" ui-sref={{entry.route}}>{{entry.name|translate}}</md-button></p>
+        </md-sidenav>
+
+        <header class="masthead">
+            <div class="slider-container" id="slider">
+                <div class="container">
+                    <div class="row mh-container">
+                        <h1><span>Trinkfreunde-Heidelberg</span></h1>
+                        <h3>Gaming Community since 2013</h3>
+
+                        <div class="btn-group btn-group-justified btn-lg small">
+                                <div class="btn-group">
+                                    <md-button ng-click="changeLang('GER')" >
+                                        <md-icon style="height: 25%;width: 25%;" md-svg-icon="img/german_flag.svg"></md-icon>
+                                    </md-button>
+                                    <md-button ng-click="changeLang('ENG')" >
+                                        <md-icon style="height: 25%;width: 25%;" md-svg-icon="img/english_flag.svg"></md-icon>
+                                    </md-button>
+                                </div>
+                        </div>
+                       <h3 style="color:red;background-color: white">{{'lblHint'|translate}}</h3>
+
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+            <div ui-view></div>
+
+
+
+
+
+        <footer id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-push-2 clearfix">
+                    </div>
+                    <div class="col-md-12">
+                        <ul>
+                            <hr/>
+                            <p><h3>Contact information</h3></p>
+                            <p>Tim Gaudich</p>
+                            <p>Goethetraße 16</p>
+                            <p>74939 Zuzenhausen</p>
+                            <p>Phone: +49 (0) 1785513215</p>
+                            <p>E-Mail: tiga05@gmx.de</p>
+                        </ul>
+
+                    </div>
+                    <div class="col-md-12">
+
+                        <p class="rights">
+                            2014 <span>SevenApp</span> Landing Page Developed by <a href="http://www.scoopthemes.com"><span>ScoopThemes</span></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!--temporary scripts -->
+   <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script> -->
+    <script src="jspm_packages/github/angular/bower-angular@1.5.0/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+
+    <script src="jspm_packages/github/angular/bower-angular-animate@1.5.0/angular-animate.js"></script>
+    <script src="jspm_packages/github/angular/bower-angular-aria@1.5.0/angular-aria.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.4/angular-material.min.js"></script>
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/1.0.5/angular-material.min.css">
+    <script src="js/angular-translate.min.js"></script>
+    <script src="app.js"></script>
+
+    <script type="text/javascript" src="https://static.tsviewer.com/short_expire/js/ts3viewer_loader.js"></script>
+
+    <!--temporary scripts -->
+
+
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+
+   <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>
+
+    <!-- jQuery REVOLUTION Slider  -->
+
+    <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+    <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+
+    <script src="js/script.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            appMaster.preLoader();
+        });
+    </script>
+
+</body>
+
+</html>
