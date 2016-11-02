@@ -39,14 +39,14 @@ myApp.config(function ($translateProvider) {
         lblRulesp5: 'Rule5',
         lblRulesp6: 'Rule6',
         lblRulesp7: 'Rule7',
-        lblHint: 'Please advise: This Page is still under construction!',
+        lblHint: 'Please be advised, this Page is still under construction!',
         lblWelcome: 'Hello and welcome on our Homepage!',
         lblWhoWeAre: 'Who we are',
-        lblWhoWeAreTxtp1: 'PLACEHOLDER TEXT1',
-        lblWhoWeAreTxtp2: "PLACEHOLDER TEXT2",
-        lblWhoWeAreTxtp3: "PLACEHOLDER TEXT3",
-        lblWhoWeAreTxtp4: "PLACEHOLDER TEXT4",
-        lblWhoWeAreTxtp5: "PLACEHOLDER TEXT5",
+        lblWhoWeAreTxtp1: 'We are the "Trinkfreunde Heidelberg" a mainly german and english-speaking gaming-community founded in 2013.',
+        lblWhoWeAreTxtp2: "We welcome all people who want to play in friendly atmosphere. Our Teamspeak has 512 slots and many different areas, in wich you can meet other players from many nations most of the time.",
+        lblWhoWeAreTxtp3: "",
+        lblWhoWeAreTxtp4: "We have no duties in our community - feel free to play when and what you like!",
+        lblWhoWeAreTxtp5: 'You are a frequent visitor and you still have no "friends" or "member" tag? Contact one of our admins!',
         lblToTeamspeak: "Join us on Teamspeak!"
     });
     $translateProvider.translations('GER', {
@@ -63,7 +63,7 @@ myApp.config(function ($translateProvider) {
         lblRulesp4: '3. Den Anweisungen von Admins ist Folge zu leisten.',
         lblRulesp5: '4. Nutzt, wenn möglich, für jedes Spiel die dafür vorgesehenen Channel.',
         lblRulesp6: '5. Solltet ihr für längere Zeit (mehr als 5 Minuten) AFK gehen, nutzt bitte die Funktionen Sound muten oder AFK des TS, damit unser Bot euch für die Dauer eurer Abstinenz automatisch in den dafür vorgesehen Channel verschieben kann (geschieht nach einigen Sekunden). Ihr werdet automatisch zurückgeschoben, wenn ihr die Funktion wieder deaktiviert.',
-        lblRulesp7: 'Sollte es Fragen, Anregungen, Kritik oder andere Probleme geben stehen euch unsere Admins jederzeit gerne zur Verfügung. Der ranghöchste Admin ist tiga05, er hat in jedem Fall das letzte Wort.',
+        lblRulesp7: 'Sollte es Fragen, Anregungen, Kritik oder andere Probleme geben stehen euch unsere Admins wie z.B. Warlord oder Felix jederzeit gerne zur Verfügung. Der ranghöchste Admin ist tiga05, er hat in jedem Fall das letzte Wort.',
         lblHint: 'Achtung! Diese Seite befindet sich noch im Aufbau!',
         lblWelcome: 'Hallo und Willkommen auf unserer Homepage!',
         lblWhoWeAre: 'Wer wir sind',
@@ -71,7 +71,7 @@ myApp.config(function ($translateProvider) {
         lblWhoWeAreTxtp2: 'Uns ist jeder willkommen der entspannt mit anderem spielen möchte. Wir bieten einen TS mit 512 Slots und diversen Areas auf dem praktisch immer andere Member anzutreffen sind.',
         lblWhoWeAreTxtp3: 'Die Community umfasst inzwischen neben Deutschen auch viele andere Nationalitäten, unter anderem Briten und Schweden.',
         lblWhoWeAreTxtp4: 'Bei uns gibt es keine Verpflichtungen oder ähnliches, so lange Ihr die Verhaltensregeln beachtet, steht euch völlig frei was Ihr macht.',
-        lblWhoWeAreTxtp5: 'Ihr seid oft auf dem TS und habt weder ein "Freunde"- noch ein "Member"-Tag? Kein Problem -Sprecht einfach einen unserer Admims an!',
+        lblWhoWeAreTxtp5: 'Ihr seid oft auf dem TS und habt weder ein "Freunde"- noch ein "Member"-Tag? Kein Problem -Sprecht einfach einen unserer Admins an!',
         lblToTeamspeak: "Auf den Teamspeak!"
     });
     $translateProvider.uniformLanguageTag('bcp47');
@@ -204,6 +204,10 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
         .state('orignalIndex', {
             url: "/orignalIndex",
             templateUrl: "partials/index_original.html"
+        })
+        .state('impressum', {
+            url: "/Impressum",
+            templateUrl: "partials/impressum.html"
         })
 });
 

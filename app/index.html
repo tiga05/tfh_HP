@@ -23,7 +23,7 @@
 
 </head>
 
-<body ng-app="myApp" ng-controller="mainController">
+<body ng-app="myApp" ng-controller="mainController" ng-cloak>
 
 <div id="wrap">
     <!-- obere Toolbarleiste BEGIN-->
@@ -31,7 +31,8 @@
         <div layout="column">
             <md-toolbar scroll> <!--scroll -->
                 <div class="md-toolbar-tools site-content-toolbar">
-                    <md-button><img style="max-width: 50%; max-height: 50%; margin-top:30px" src="../img/tfh.png">
+                    <md-button href="http://trinkfreunde-heidelberg.de/"><img
+                        style="max-width: 50%; max-height: 50%; margin-top:30px" src="../img/tfh.png">
                     </md-button>
                     <!-- fill up the space between left and right area -->
                     <span flex></span>
@@ -51,8 +52,9 @@
         <md-toolbar class="md-theme-light">
             <h1 class="md-toolbar-tools">Menu</h1>
         </md-toolbar>
-            <md-button ng-repeat="entry in navBarEntries" class="md-toolbar-dropdown" ng-click="close()" ui-sref={{entry.route}}>{{entry.name|translate}}
-            </md-button>
+        <md-button ng-repeat="entry in navBarEntries" class="md-toolbar-dropdown" ng-click="close()"
+                   ui-sref={{entry.route}}>{{entry.name|translate}}
+        </md-button>
     </md-sidenav>
     <!-- obere Toolbarleiste END-->
     <!-- Textinhalte BEGIN-->
@@ -79,40 +81,35 @@
     </div>
 
 
-            <!-- Textinhalte END-->
-            <footer style="background-color: rgb(0,150,136)">
-                <div >
-                    <div >
-                        <div >
-                        </div>
-                        <div >
-                            <ul style="text-align: left">
-                                <hr/>
-                                <p>
-                                <h3 style="text-align: left; color:white">Impressum</h3></p>
-                                <p>Tim Gaudich</p>
-                                <p>Goethetraße 16</p>
-                                <p>74939 Zuzenhausen</p>
-                                <p>E-Mail: mail@trinkfreunde-heidelberg.de</p>
-                            </ul>
-                        </div>
-                    </div>
+    <!-- Textinhalte END-->
+    <footer style="background-color: rgb(0,150,136)">
+        <div>
+            <div>
+                <div>
                 </div>
+                <div>
+                    <ul style="text-align: left">
+                        <hr/>
+                            <md-button hide-xs ui-sref="impressum">Impressum</md-button>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-            </footer>
+    </footer>
 
-            <!-- benötigte externe Skripte -->
-            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
-            <script src="jspm_packages/github/angular/bower-angular-animate@1.5.0/angular-animate.js"></script>
-            <script src="jspm_packages/github/angular/bower-angular-aria@1.5.0/angular-aria.js"></script>
-            <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.js"></script>
-            <script src="js/angular-translate.min.js"></script>
-            <script src="app.js"></script>
-            <script type="text/javascript"
-                    src="https://static.tsviewer.com/short_expire/js/ts3viewer_loader.js"></script>
+    <!-- benötigte externe Skripte -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+    <script src="jspm_packages/github/angular/bower-angular-animate@1.5.0/angular-animate.js"></script>
+    <script src="jspm_packages/github/angular/bower-angular-aria@1.5.0/angular-aria.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.js"></script>
+    <script src="js/angular-translate.min.js"></script>
+    <script src="app.js"></script>
+    <script type="text/javascript"
+            src="https://static.tsviewer.com/short_expire/js/ts3viewer_loader.js"></script>
 
-    </div>
+</div>
 </body>
 
 </html>
