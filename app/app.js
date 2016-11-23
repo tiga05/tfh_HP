@@ -30,7 +30,9 @@ myApp.config(function ($translateProvider) {
         btnMember: 'Member',
         btnForum: 'Forum',
         btnTeamspeak: 'Teamspeak',
+        btnMinecraft:'Minecraft Mapviewer',
         btnRules: 'Rules',
+        btnOpenFullScreen:'Open in Fullscreen',
         lblRulesHeadline: 'Rules',
         lblRulesp1: 'Rule1',
         lblRulesp2: 'Rule2',
@@ -56,6 +58,8 @@ myApp.config(function ($translateProvider) {
         btnForum: 'Forum',
         btnTeamspeak: 'Teamspeak',
         btnRules: 'Verhaltensregeln',
+        btnMinecraft:'Minecraft Mapviewer',
+        btnOpenFullScreen:'Vollbildansicht öffnen',
         lblRulesHeadline: 'Verhaltensregeln',
         lblRulesp1: 'Um allen Personen das Beisammensein und Spielen in einer angenehmen Atmosphäre zu ermöglichen, bitten wir euch auf einige simple Grundregeln zu achten:',
         lblRulesp2: '1. Niemand darf aufgrund von Religion, Meinung, Glaube, Aussehen etc. beleidigt oder anderweitig in irgend einer Form diskriminiert werden.',
@@ -142,7 +146,8 @@ myApp.controller('mainController', function ($scope, $translate, $timeout, $mdSi
         //{name:'btnNews',route:'news'},
         //{name:'btnMember',route:'member'},
         //{name:'btnForum',route:'forum'},
-        {name: 'btnTeamspeak', route: 'ts'}
+        {name: 'btnTeamspeak', route: 'ts'},
+        {name: 'btnMinecraft', route: 'Minecraft'}
     ];
     $scope.rules = [
         {name: 'lblRulesp2'},
@@ -200,6 +205,10 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
         .state('ts', {
             url: "/teamspeak",
             templateUrl: "partials/teamspeak.html"
+        })
+        .state('Minecraft', {
+            url: "/MinecraftMapviewer",
+            templateUrl: "partials/minecraft.html"
         })
         .state('orignalIndex', {
             url: "/orignalIndex",
